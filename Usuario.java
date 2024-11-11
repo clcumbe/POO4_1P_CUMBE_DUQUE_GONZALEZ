@@ -139,6 +139,33 @@ public abstract class Usuario {
        return rolPermitido.equals("AMBOS") || rolPermitido.equals(rol);
    }
 }
+/*    
+public class Estudiante extends Usuario(){
+    protected String matricula;
+    protected String carrera;
 
+    public Estudiante(String codigoUnico, String cedula, String nombres, String apellidos, String usuario, String contrasena, String correo, TipoUsuario tipoUsuario, String matricula,String carrera){
+        super(codigoUnico, cedula, nombres, apellidos, usuario, contrasena, correo, carrera);
+        this.carrera = carrera;
+        this.matricula = matricula;
+    }
+
+    public void setCarrera(String carrera){
+        this.carrera=carrera;
+    }
+
+    public void setMatricula(String matricula){
+        this.matricula = matricula;
+    }
+
+    public String getCarrera(){
+        return this.carrera;
+    }
+
+    public String getMatricula(){
+        return this.matricula;
+    }
+        }
+        */
 }
 
