@@ -8,24 +8,25 @@
     <artifactId>proyecto</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <dependencies>
-        <dependency> ​
+<dependencies>
+    <dependency>
 
-			<groupId>com.sun.mail</groupId> 							<artifactId>javax.mail</artifactId> 							<version>1.6.2</version> ​
+			<groupId>com.sun.mail</groupId> 							
+            <artifactId>javax.mail</artifactId> 							
+            <version>1.6.2</version> 
 
-</dependency>​
+    </dependency>
 
-​
+    <dependency>
 
-<dependency> ​
+		<groupId>io.github.cdimascio</groupId>
 
-		<groupId>io.github.cdimascio</groupId>​
+		<artifactId>dotenv-java</artifactId>
 
-		 <artifactId>dotenv-java</artifactId> ​
+		<version>3.0.0</version>
 
-		 <version>3.0.0</version> ​
+    </dependency>
 
-</dependency>​
     </dependencies>
 
     <properties>
