@@ -1,4 +1,4 @@
-001 | 0923456789 | Juan | Pérez | jperez | contrasena123 | jperez@universidad.edu | E
+a001 | 0923456789 | Juan | Pérez | jperez | contrasena123 | jperez@universidad.edu | E
 002 | 0912345678 | María | Rodríguez | mrodriguez | password456 | mrodriguez@universidad.edu | P
 003 | 0956781234 | Carlos | Gómez | cgomez | 1234abc | cgomez@universidad.edu | A
 004 | 0934567890 | Ana | Morales | amorales | clave789 | amorales@universidad.edu | E

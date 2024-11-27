@@ -1,6 +1,8 @@
 package com.proyecto;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Reserva {
     private String codigoReserva;       // Código único de la reserva
@@ -103,4 +105,7 @@ public class Reserva {
                 + cedulaUsuario + ", fechaReserva=" + fechaReserva + ", codigoEspacio=" + codigoEspacio
                 + ", tipoEspacio=" + tipoEspacio + ", estado=" + estado + ", motivo=" + motivo + "]";
     }
+
+    static List<Usuario> usuarios = ArchivoUtils.cargarUsuarios("usuarios.txt");
+    
 }

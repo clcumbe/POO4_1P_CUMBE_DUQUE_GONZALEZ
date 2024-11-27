@@ -31,6 +31,27 @@ public class ArchivoUtils {
         return usuarios;
     }
 
+    // public static List<Estudiante> cargarEstudiantes(String ruta) {
+    //     List<Estudiante> estudiantes = new ArrayList<>();
+    //     try (BufferedReader br = new BufferedReader(new FileReader(ruta))) {
+    //         String linea;
+    //         while ((linea = br.readLine()) != null) {
+    //             String[] partes = linea.split("\\|");
+    //             String codigo = partes[0].trim();
+                
+
+    //             Estudiante nuevoEstudiante = crearEstudiante(codigo);
+    //             if (nuevoEstudiante != null) {
+    //                 estudiantes.add(nuevoEstudiante);
+    //             }
+    //         }
+    //     } catch (IOException e) {
+    //         System.out.println("Error al cargar estudiantes: " + e.getMessage());
+    //     }
+    //     return estudiantes;
+    // }
+
+
     private static Usuario crearUsuario(String rol, String codigo, String cedula, String nombres, String apellidos, String usuario, String contrasena, String correo) {
         if ("E".equals(rol)) {
             return new Estudiante(codigo, cedula, nombres, apellidos, usuario, contrasena, correo, "MATRICULA", "CARRERA");
@@ -149,6 +170,7 @@ public static void guardarReservaEnArchivo(Reserva nuevaReserva) {
         System.out.println("Error al guardar la reserva en el archivo: " + e.getMessage());
     }
 }
+
 
 
 }

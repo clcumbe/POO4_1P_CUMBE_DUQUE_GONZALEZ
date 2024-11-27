@@ -8,6 +8,7 @@ public class Main {
     static List<Usuario> usuarios = ArchivoUtils.cargarUsuarios("usuarios.txt");
     static List<Espacio> espacios = ArchivoUtils.cargarEspacios("espacios.txt");
     static List<Reserva> reservas = ArchivoUtils.cargarReservas("reservas.txt");
+    //static List<Estudiante> estudiantes = ArchivoUtils.
     public static void main(String[] args) {
         
 
@@ -41,4 +42,6 @@ public class Main {
         }
         return null; // Retorna null si no se encuentra el usuario
     }
+
+    //static List<Estudiante> eestudiantesList = ArchivoUtils.cargarUsuarios("estudiantes.txt");
 }
