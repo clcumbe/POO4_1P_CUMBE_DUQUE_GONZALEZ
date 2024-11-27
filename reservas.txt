@@ -8,8 +8,12 @@
 5008 | 001 | 0923456789 | 2024-10-15 | 113 | AULA | APROBADO | Reunión de grupo de estudio
 5009 | 014 | 0943219876 | 2024-10-15 | 115 | LABORATORIO | APROBADO | Lenguajes de Programación
 5010 | 007 | 0957891234 | 2024-10-16 | 116 | AUDITORIO | APROBADO | Estadística
-5011 | 009 | 0924567891 | 2024-10-16 | 117 | AULA | APROBADO | Ayudantías de Álgebra
+5011 | 009 | 0924567891 | 2024-10-16 | 117 | AULA | APROBADO | Ayudantías de �?lgebra
 5012 | 012 | 0919876543 | 2024-10-17 | 120 | AUDITORIO | APROBADO | Innovación Tecnológica
 5013 | 003 | 0956781234 | 2024-10-17 | 111 | LABORATORIO | APROBADO | Electrónica
 5014 | 001 | 0923456789 | 2024-10-18 | 118 | CANCHA | PENDIENTE | Partido de Fútbol entre facultades
 5015 | 002 | 0912345678 | 2024-10-18 | 104 | AUDITORIO | APROBADO | Ciencia de Datos
+5017 | 001 | 0923456789 | 2024-11-26 | 110 | CANCHA | PENDIENTE | Reserva de Cancha Baloncesto
+5018 | 005 | 0945678912 | 2024-11-26 | 103 | LABORATORIO | APROBADO | Reserva de Lab Computación
+5019 | 001 | 0923456789 | 2024-11-27 | 110 | CANCHA | APROBADO | Reserva de Cancha Baloncesto
+5020 | 001 | 0923456789 | 2024-11-27 | 110 | CANCHA | RECHAZADO | Reserva de Cancha Baloncesto

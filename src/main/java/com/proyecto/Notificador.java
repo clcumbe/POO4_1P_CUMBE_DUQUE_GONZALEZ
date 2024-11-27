@@ -35,8 +35,7 @@ public class Notificador {
     }
 
     public static void enviarCorreoNotificacion(Reserva reserva) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'enviarCorreoNotificacion'");
+        //
     }
 }
 

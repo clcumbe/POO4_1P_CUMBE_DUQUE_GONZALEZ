@@ -27,29 +27,34 @@ public class Administrador extends Usuario {
     // Sobrescribir el método menu() de la clase Usuario
     @Override
     public void mostrarMenu() {
-        // Mostrar las opciones del menú para el administrador
-        System.out.println("Menú Administrador:");
-        System.out.println("1. Aprobar o Rechazar Reserva");
-        System.out.println("2. Consultar Reservas");
-        System.out.println("3. Salir");
-        System.out.print("Seleccione una opción: ");
-        int opcion = scanner.nextInt();
-        scanner.nextLine();  // Limpiar el buffer
+        int opcion;
 
-        switch (opcion) {
-            case 1:
-                aprobarORechazarReserva();
-                break;
-            case 2:
-                consultarReservas();
-                break;
-            case 3:
-                System.out.println("Saliendo...");
-                break;
-            default:
-                System.out.println("Opción no válida.");
-        }
+        do {
+            // Mostrar las opciones del menú para el administrador
+            System.out.println("\nMenú Administrador:");
+            System.out.println("1. Aprobar o Rechazar Reserva");
+            System.out.println("2. Consultar Reservas");
+            System.out.println("3. Salir");
+            System.out.print("Seleccione una opción: ");
+            opcion = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (opcion) {
+                case 1:
+                    aprobarORechazarReserva();
+                    break;
+                case 2:
+                    consultarReservas();
+                    break;
+                case 3:
+                    System.out.println("Saliendo del menú administrador...");
+                    break;
+                default:
+                    System.out.println("Opción no válida. Intente nuevamente.");
+            }
+        } while (opcion != 3);
     }
+
 
     // Método para aprobar o rechazar una reserva
     public void aprobarORechazarReserva() {
@@ -58,7 +63,7 @@ public class Administrador extends Usuario {
         System.out.print("¿Desea aprobar la reserva? (S/N): ");
         char opcion = scanner.nextLine().charAt(0);
 
-        boolean aprobar = opcion == 'S' || opcion == 's';  // Aprobar si la opción es 'S'
+        boolean aprobar = opcion == 'S' || opcion == 's';
 
         // Buscar la reserva correspondiente y aprobarla o rechazarla
         for (Reserva reserva : Main.reservas) {
@@ -71,8 +76,8 @@ public class Administrador extends Usuario {
                     reserva.setEstado("RECHAZADO");
                     System.out.println("Reserva " + codigoReserva + " rechazada.");
                 }
-                // Enviar notificación por email
-                Notificador.enviarCorreoNotificacion(reserva);  // Llamamos al notificador
+                //Notificador.enviarCorreoNotificacion(reserva);
+                ArchivoUtils.guardarReservas(Main.reservas, "reservas.txt");
                 return;
             }
         }

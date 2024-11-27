@@ -30,7 +30,7 @@ public class Profesor extends Usuario {
             System.out.println("3. Salir");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
-            scanner.nextLine(); // Limpiar el buffer
+            scanner.nextLine();
 
             switch (opcion) {
                 case 1:
@@ -99,6 +99,9 @@ public class Profesor extends Usuario {
 
             // Guardar la nueva reserva en el archivo de texto
             ArchivoUtils.guardarReservaEnArchivo(nuevaReserva);
+
+            //presentar correo
+            Notificador.enviarCorreoProfesor(nuevaReserva);
            
 
         } else {

@@ -31,12 +31,17 @@ public class ArchivoUtils {
         return usuarios;
     }
 
+    //POLIMORFISMO
+    
     private static Usuario crearUsuario(String rol, String codigo, String cedula, String nombres, String apellidos, String usuario, String contrasena, String correo) {
         if ("E".equals(rol)) {
+            // Usuari e1 = new Estudiante();
             return new Estudiante(codigo, cedula, nombres, apellidos, usuario, contrasena, correo, "MATRICULA", "CARRERA");
         } else if ("P".equals(rol)) {
+            // Usuari e1 = new profe();
             return new Profesor(codigo, cedula, nombres, apellidos, usuario, contrasena, correo, "FACULTAD", new String[]{"MATERIAS"});
         } else if ("A".equals(rol)) {
+            // Usuari e1 = new Admin();
             return new Administrador(codigo, cedula, nombres, apellidos, usuario, contrasena, correo, "CARGO");
         }
         return null;
@@ -149,6 +154,25 @@ public static void guardarReservaEnArchivo(Reserva nuevaReserva) {
         System.out.println("Error al guardar la reserva en el archivo: " + e.getMessage());
     }
 }
+
+public static void guardarReservas(List<Reserva> reservas, String archivo) {
+    try (PrintWriter writer = new PrintWriter(new FileWriter(archivo))) {
+        for (Reserva reserva : reservas) {
+            // Escribir cada reserva en el formato del archivo
+            writer.println(reserva.getCodigoReserva() + " | " + 
+                           reserva.getCodigoUsuario() + " | " + 
+                           reserva.getCedulaUsuario() + " | " + 
+                           new SimpleDateFormat("yyyy-MM-dd").format(reserva.getFechaReserva()) + " | " +
+                           reserva.getCodigoEspacio() + " | " + 
+                           reserva.getTipoEspacio() + " | " + 
+                           reserva.getEstado() + " | " + 
+                           reserva.getMotivo());
+        }
+    } catch (IOException e) {
+        System.out.println("Error al guardar las reservas: " + e.getMessage());
+    }
+}
+
 
 
 }

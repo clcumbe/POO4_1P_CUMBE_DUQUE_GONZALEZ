@@ -65,6 +65,7 @@ public class Estudiante extends Usuario {
                     System.out.println("Opción no válida, intente de nuevo.");
             }
         } while (opcion != 3);
+        
     }
 
    
@@ -112,10 +113,12 @@ public class Estudiante extends Usuario {
             Main.reservas.add(nuevaReserva);
 
             // Mostrar la reserva realizada con el formato de toString
-            System.out.println("Reserva realizada con éxito: " + nuevaReserva.toString());
+            //System.out.println("Reserva realizada con éxito: " + nuevaReserva.toString());
 
             // Guardar la nueva reserva en el archivo de texto
             ArchivoUtils.guardarReservaEnArchivo(nuevaReserva);
+            //presentar correo
+            Notificador.enviarCorreoEstudiante(nuevaReserva);
            
 
         } else {
