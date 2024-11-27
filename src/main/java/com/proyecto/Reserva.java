@@ -103,4 +103,5 @@ public class Reserva {
                 + cedulaUsuario + ", fechaReserva=" + fechaReserva + ", codigoEspacio=" + codigoEspacio
                 + ", tipoEspacio=" + tipoEspacio + ", estado=" + estado + ", motivo=" + motivo + "]";
     }
+    
 }

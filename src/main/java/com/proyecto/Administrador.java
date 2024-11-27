@@ -62,7 +62,7 @@ public class Administrador extends Usuario {
 
         // Buscar la reserva correspondiente y aprobarla o rechazarla
         for (Reserva reserva : Main.reservas) {
-            if (reserva.getCodigoReserva().equals(codigoReserva) && reserva.getCodigoUsuario().startsWith("S")) {
+            if (reserva.getCodigoReserva().equals(codigoReserva) && (reserva.getCodigoUsuario().equals("013")||reserva.getCodigoUsuario().equals("010")||reserva.getCodigoUsuario().equals("001")||reserva.getCodigoUsuario().equals("004")||reserva.getCodigoUsuario().equals("007") )) {
                 // Solo las reservas de estudiantes pueden ser aprobadas o rechazadas por el administrador
                 if (aprobar) {
                     reserva.setEstado("APROBADO");
